@@ -1,0 +1,22 @@
+{
+    "name": "avra911/magento-coding-standard",
+    "description": "Magekube PHP Code Sniffer Coding Standard designed for Magento 2 applications",
+    "require": {
+        "magento/magento-coding-standard": "^35.0",
+        "pheromone/phpcs-security-audit": "^2.0",
+        "slevomat/coding-standard": "^8.15.0",
+        "squizlabs/php_codesniffer": "^3.11.0",
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.0"
+    },
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "type": "phpcodesniffer-standard",
+    "version": "1.0.0",
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}
