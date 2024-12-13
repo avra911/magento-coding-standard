@@ -27,10 +27,14 @@
         <exclude name="SlevomatCodingStandard.Namespaces.FullyQualifiedExceptions.NonFullyQualifiedException"/>
         <!-- Bitches about Interface suffix in interfaces. Which is a convention used in Magento. -->
         <exclude name="SlevomatCodingStandard.Classes.SuperfluousInterfaceNaming.SuperfluousSuffix"/>
+        <!-- Bitches about Abstract or Final. Which is in conflict with proxies. -->
+        <exclude name="SlevomatCodingStandard.Classes.RequireAbstractOrFinal"/>
         <!-- We don't need new lines before the class closing brace -->
         <exclude name="SlevomatCodingStandard.Classes.EmptyLinesAroundClassBraces.NoEmptyLineBeforeClosingBrace"/>
         <!-- ...or after the class opening brace -->
         <exclude name="SlevomatCodingStandard.Classes.EmptyLinesAroundClassBraces.NoEmptyLineAfterOpeningBrace"/>
+        <!-- Allow constructor property promotion -->
+        <exclude name="SlevomatCodingStandard.Classes.DisallowConstructorPropertyPromotion.DisallowedConstructorPropertyPromotion"/>
         <!-- We're perfectly fine with type hints like string[] since that's what Magento uses in xml files too. -->
         <exclude name="SlevomatCodingStandard.TypeHints.DisallowArrayTypeHintSyntax.DisallowedArrayTypeHintSyntax"/>
         <!-- While it woudl be nice to disallow mixed, this also returns false positives on mixed[]. -->
@@ -68,8 +72,7 @@
     </rule>
     <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
         <properties>
-            <property name="declareOnFirstLine" value="1"/>
-            <property name="linesCountAfterDeclare" value="2"/>
+            <property name="linesCountAfterDeclare" value="1"/>
             <property name="spacesCountAroundEqualsSign" value="0"/>
         </properties>
     </rule>
