@@ -61,10 +61,18 @@
         <exclude name="SlevomatCodingStandard.Namespaces.UseDoesNotStartWithBackslash.UseStartsWithBackslash"/>
         <!-- We can usually live without this one. -->
         <exclude name="SlevomatCodingStandard.Functions.StrictCall.StrictParameterMissing"/>
+        <!-- Allow missing trailing comma in Multi-line function declaration. -->
+        <exclude name="SlevomatCodingStandard.Functions.RequireTrailingCommaInDeclaration.MissingTrailingComma"/>
+        <!-- Allow missing trailing comma in Multi-line function calls. -->
+        <exclude name="SlevomatCodingStandard.Functions.RequireTrailingCommaInCall.MissingTrailingComma"/>
         <!-- While useful in regular methods, in M2 this would throw a lot of warnings for constructors. -->
         <exclude name="SlevomatCodingStandard.Classes.ParentCallSpacing.IncorrectLinesCountBeforeControlStructure"/>
         <!-- In M2 there's a convention to end class names of exceptions with Exception. -->
         <exclude name="SlevomatCodingStandard.Classes.SuperfluousExceptionNaming.SuperfluousSuffix"/>
+    </rule>
+    <rule ref="Magento2">
+        <!-- Conflicts with SlevomatCodingStandard.TypeHints.PropertyTypeHint.UselessAnnotation -->
+        <exclude name="Magento2.Commenting.ClassPropertyPHPDocFormatting.Missing"/>
     </rule>
     <rule ref="PSR2">
         <!-- Conflicts with PSR12 -->
